@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     HttpClientModule
+  ],exports:[
+    InfoComponent,TransformationsComponent
   ]
 })
 export class CharactersModule { }

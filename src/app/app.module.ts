@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app.routes';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CharactersModule } from './characters/characters.module';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    CharactersModule
     
 ],
   providers: [],

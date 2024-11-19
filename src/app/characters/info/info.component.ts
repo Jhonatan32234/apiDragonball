@@ -5,29 +5,21 @@ import { CharactersService } from '../service/characters.service';
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
-  styleUrl: './info.component.css'
+  styleUrls: ['./info.component.css']
 })
-export class InfoComponent  implements OnInit {
+export class InfoComponent implements OnInit {
+  characters: Info[] = [];
 
-
-  characters:Info[] =[]
-
-  constructor(private characterService:CharactersService){}
-
+  constructor(private characterService: CharactersService) {}
 
   ngOnInit(): void {
-    this.cargarPersonajes()
-    console.log(this.characters);
-    
-      
+    this.cargarPersonajes();
   }
 
-
-  cargarPersonajes():void{
-    this.characterService.getInfo().subscribe(personaje =>{
-      this.characters = personaje;
-    })
+  cargarPersonajes(): void {
+    this.characterService.getInfo().subscribe(response => {
+      // Accedemos a 'items' para obtener el arreglo de personajes
+      this.characters = response.items;
+    });
   }
-
-
 }

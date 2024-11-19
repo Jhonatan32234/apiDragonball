@@ -7,15 +7,11 @@ import { Info } from '../interface/info';
   providedIn: 'root'
 })
 export class CharactersService {
+  private urlDragonBall = "https://dragonball-api.com/api/characters/";
 
-  private urlDragonBall = "https://dragonball-api.com/api/characters/"
+  constructor(private http: HttpClient) {}
 
-
-  constructor(private http:HttpClient) { }
-
-  getInfo():Observable<Info[]>{
-    return  this.http.get<Info[]>(this.urlDragonBall)
+  getInfo(): Observable<{ items: Info[] }> {
+    return this.http.get<{ items: Info[] }>(this.urlDragonBall);
   }
-
-  
 }
