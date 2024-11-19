@@ -7,6 +7,9 @@ import { Info } from '../interface/info';
   providedIn: 'root'
 })
 export class CharactersService {
+
+  
+
   private urlDragonBall = "https://dragonball-api.com/api/characters/";
 
   constructor(private http: HttpClient) {}
