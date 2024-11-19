@@ -22,4 +22,8 @@ export class InfoComponent implements OnInit {
       this.characters = response.items;
     });
   }
+  mostrar(id: number): void {
+    console.log(`Personaje seleccionado: ${id}`);
+  }
+  
 }
