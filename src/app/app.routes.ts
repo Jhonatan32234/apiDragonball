@@ -7,6 +7,9 @@ import { TransformationsComponent } from './characters/transformations/transform
 
 
 export const routes: Routes = [
+    {path:'characters',component:InfoComponent},
+    {path:'transformations',component:TransformationsComponent},
+
 ];
 
 @NgModule({
